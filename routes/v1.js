@@ -63,7 +63,7 @@ function addRoutes(app, peliasConfig) {
 
   // fallback to coarse reverse when regular reverse didn't return anything
   const coarseReverseShouldExecute = all(
-    isPipServiceEnabled, not(predicates.hasRequestErrors), not(predicates.hasResponseData), not(predicates.isOnlyNonAdminLayers)
+    isPipServiceEnabled, not(predicates.hasRequestErrors), not(predicates.hasResponseData), not(predicates.isOnlyNonAdminLayers), not(predicates.hasRequestCategories)
   );
 
   const libpostalShouldExecute = all(
